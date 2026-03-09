@@ -91,10 +91,9 @@ Expense Approval System
         return f"Processing failed: {e}"
 
 
-async def main():
-    await mcp.run_async(transport="stdio")  # HTTP for Inspector
-
-
+if __name__ == "__main__":
+    mcp.run(transport="stdio")
 # if __name__ == "__main__":
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
+
 #     mcp.run()
