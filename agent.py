@@ -91,9 +91,11 @@ Expense Approval System
         return f"Processing failed: {e}"
 
 
-if __name__ == "__main__":
-    mcp.run(transport="stdio")
+
+
 # if __name__ == "__main__":
 #     print("Starting MCP Expense Approval Server...", file=sys.stderr)
-
+if __name__ == "__main__":
+    asyncio.run(main())
 #     mcp.run()
+
