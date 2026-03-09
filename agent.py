@@ -3,12 +3,7 @@ import smtplib
 from email.message import EmailMessage
 import os
 from dotenv import load_dotenv
-
-# ... rest of your code
-
 import sys
-#https://github.com/unnams/Agentic.git
-
 load_dotenv()
 
 mcp = FastMCP("Expense Approval Service")
@@ -91,11 +86,10 @@ Expense Approval System
         return f"Processing failed: {e}"
 
 
-
-
-# if __name__ == "__main__":
-#     print("Starting MCP Expense Approval Server...", file=sys.stderr)
 if __name__ == "__main__":
-    asyncio.run(main())
-#     mcp.run()
+    print("Starting MCP Expense Approval Server...", file=sys.stderr)
+    mcp.run(transport="stdio")
+    
+
+
 
