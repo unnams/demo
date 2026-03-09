@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 import sys
 load_dotenv()
 
-mcp = FastMCP("Expense Approval Service")
-
+server = FastMCP("Expense Approval Service")
+#mcp
 # Approver Emails
 APPROVERS = {
     "Manager": "pranathip029@gmail.com",
@@ -41,7 +41,7 @@ def send_email(to: str, subject: str, body: str):
 
 
 # MCP Tool
-@mcp.tool()
+@server.tool()
 def process_expense(employee: str, amount: float, purpose: str):
     try:
         print("Processing expense...", file=sys.stderr)
@@ -88,6 +88,7 @@ Expense Approval System
 
 
     
+
 
 
 
